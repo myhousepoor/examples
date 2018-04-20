@@ -32,7 +32,7 @@ function operate2(operation, operand1, operand2) {
     else throw "unknown operator";
 }
 
-// Compute the value ("hello" + " " + "world") like this:
-var j = operate2("add", "hello", operate2("add", " ", "world"));
-// Using the predefined Math.pow() function:
-var k = operate2("pow", 10, 2);
+// // Compute the value ("hello" + " " + "world") like this:
+// var j = operate2("add", "hello", operate2("add", " ", "world"));
+// // Using the predefined Math.pow() function:
+// var k = operate2("pow", 10, 2);

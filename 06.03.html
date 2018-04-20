@@ -1,0 +1,31 @@
+<!DOCTYPE html>   
+<html>
+<head>
+<title>JavaScript Loan Calculator</title>
+<style> /* This is a CSS style sheet: it adds style to the program output */
+.output { font-weight: bold; }           /* Calculated values in bold */
+#payment { text-decoration: underline; } /* For element with id="payment" */
+#graph { border: solid black 1px; }      /* Chart has a simple border */
+th, td { vertical-align: top; }          /* Don't center table cells */
+</style>
+</head>
+<script src="06.03.extend2.js"></script>
+<script>
+    var a = {a:1,b:2};
+    var b= {a:2,c:3};
+    var c = a.extend(b);
+    // document.writeln(c.toString());
+
+    var a1 = new Object();
+    a1.a=1;
+    a1.b=2;
+    var b1 = new Object();
+    b1['a'] =2;
+    b1['c']=3;
+
+    var c1= a1.extend(b1);
+    document.writeln(c1.toString());
+</script>
+<body>
+</body>
+</html>

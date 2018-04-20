@@ -1,7 +1,10 @@
 function Set() {          // This is the constructor
     this.values = {};     // The properties of this object hold the set
     this.n = 0;           // How many values are in the set
-    this.add.apply(this, arguments);  // All arguments are values to add
+    // this.add.apply(this, arguments);  // All arguments are values to add
+    for(var i = 0; i < arguments.length; i++) {  
+     this.add.call(this,arguments[i]);
+    }
 }
 
 // Add each of the arguments to the set.

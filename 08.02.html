@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>   
+<html>
+<head>
+<title>JavaScript Loan Calculator</title>
+<style> /* This is a CSS style sheet: it adds style to the program output */
+.output { font-weight: bold; }           /* Calculated values in bold */
+#payment { text-decoration: underline; } /* For element with id="payment" */
+#graph { border: solid black 1px; }      /* Chart has a simple border */
+th, td { vertical-align: top; }          /* Don't center table cells */
+</style>
+</head>
+<script src="08.02.functions_as_data.js"></script>
+<script>
+var i = operate(add, operate(add, 2, 3), operate(multiply, 4, 5));
+   // Compute the value ("hello" + " " + "world") like this:
+var j = operate2("add", "hello", operate2("add", " ", "world"));
+// Using the predefined Math.pow() function:
+var k = operate2("pow", 10, 2);
+
+</script>
+<body>
+</body>
+</html>

@@ -4,7 +4,7 @@
 // won't enumerate an enumerable property of o if the prototype of o has 
 // a nonenumerable property by the same name. This means that properties
 // like toString are not handled correctly unless we explicitly check for them.
-var extend2 = (function() {  // Assign the return value of this function 
+(function(w) {  // Assign the return value of this function 
  // This is the list of special-case properties we check for
  var protoprops = ["toString", "valueOf", "constructor", "hasOwnProperty",
  "isPrototypeOf", "propertyIsEnumerable","toLocaleString"];
@@ -12,7 +12,7 @@ var extend2 = (function() {  // Assign the return value of this function
     // the toString property of the test object. So return a version
     // of the extend() function that explicitly tests for the nonenumerable
     // properties of Object.prototype.
-    var ext = function patched_extend(o) {
+    w.ext = function patched_extend(o) {
         for(var i = 1; i < arguments.length; i++) {
             var source = arguments[i];
             // Copy all the enumerable properties
@@ -26,7 +26,7 @@ var extend2 = (function() {  // Assign the return value of this function
         }
         return o;
     };
-    return  ext;
+    return  w.ext ;
 
     // First check for the presence of the bug before patching it.
     for(var p in {toString:null}) {
@@ -43,4 +43,4 @@ var extend2 = (function() {  // Assign the return value of this function
     
 
    
-}());
+}(window));

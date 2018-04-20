@@ -24,5 +24,21 @@ Object.defineProperty(Object.prototype,
                 // Use it to create property on this
                 Object.defineProperty(this, names[i], desc);
             }
+
+            return  this;
         }
     });
+    Object.prototype.toString = function(){
+        var names = Object.getOwnPropertyNames(this);
+        // Loop through them
+        var r ="{";
+        for(var i = 0; i < names.length; i++) {
+            // var desc = Object.getOwnPropertyDescriptor(this,names[i]);
+            // this[names[i]]
+            // // Use it to create property on this
+            // Object.defineProperty(this, names[i], desc);
+            r += names[i] +":" + this[names[i]] +","
+        }
+        r=r.slice(0,-1) 
+        return r+= "}"
+    }

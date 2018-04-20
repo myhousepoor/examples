@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>   
+<html>
+<head>
+<title>extend_patched</title>
+<style> /* This is a CSS style sheet: it adds style to the program output */
+.output { font-weight: bold; }           /* Calculated values in bold */
+#payment { text-decoration: underline; } /* For element with id="payment" */
+#graph { border: solid black 1px; }      /* Chart has a simple border */
+th, td { vertical-align: top; }          /* Don't center table cells */
+</style>
+</head>
+<script src="09.06.Set1.js"></script>
+<script>
+   var s =new Set();
+   s.add(1);
+   s.add({a:1});
+
+   var s1 = new Set(1,'as',{d:12,e:34});
+    document.writeln(s.size());
+</script>
+<body>
+</body>
+</html>

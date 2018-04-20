@@ -13,6 +13,8 @@ function type(o) {
     // Special case for the null value:
     if (o === null) return "null";
 
+    document.writeln(o.constructor);
+
     // Another special case: NaN is the only value not equal to itself:
     if (o !== o) return "nan";
 
